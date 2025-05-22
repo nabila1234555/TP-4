@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Nabila Baghadi</title>
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+      --card-color: #ffffff;
+      --btn-color: #007bff;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --card-color: #2a2a2a;
+      --btn-color: #17a2b8;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cv-container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--card-color);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      transition: background-color 0.3s;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      background: #ccc;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .info {
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 25px;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid var(--btn-color);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .skills, .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill, .language {
+      background: var(--btn-color);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .mode-btn {
+      margin-top: 20px;
+      padding: 10px 15px;
+      border: none;
+      background-color: var(--btn-color);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+    }
+
+    .mode-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <button class="mode-btn" onclick="changerMode()">Changer Mode</button>
+
+    <div class="header">
+      <img src="SV.jpg" alt="Votre Photo" class="profile-img" />
+      <div>
+        <h1>Nabila Baghadi</h1>
+        <div class="info">Étudiante en Faculté Polydisciplinaire Ouarzazate</div>
+        <div class="info">Email : nabila.baghadi@example.com</div>
+        <div class="info">Téléphone : +212 6 12 34 56 78</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>À propos</h2>
+      <p>
+        Étudiante passionnée par le développement web, je maîtrise les langages front-end et back-end.
+        Je suis motivée à intégrer une équipe dynamique pour continuer à apprendre et évoluer dans ce domaine.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Formation</h2>
+      <p><strong>Faculté Polydisciplinaire d’Ouarzazate</strong> – Licence en Informatique</p>
+      <p>2022 – Présent</p>
+    </div>
+
+    <div class="section">
+      <h2>Diplômes Obtenus</h2>
+      <ul>
+        <li><strong>Baccalauréat</strong> – Sciences Physiques, 2020</li>
+        <li><strong>DEUG</strong> – Mathématiques/Informatique, 2022</li>
+        <li><strong>Licence</strong> – Informatique, en cours</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Langues</h2>
+      <div class="languages">
+        <div class="language">Français</div>
+        <div class="language">Anglais</div>
+        <div class="language">Arabe</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function changerMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
